@@ -1,7 +1,6 @@
 const controller = {};
-const { where, Op } = require('sequelize');
+const { Op } = require('sequelize');
 const models = require('../models');
-const { query } = require('express');
 
 controller.init = async (req, res, next) => {
     res.locals.categories = await models.Category.findAll({

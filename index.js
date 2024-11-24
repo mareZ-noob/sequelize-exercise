@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const expresshbs = require("express-handlebars");
-const { format } = require("sequelize/lib/utils");
 const { createPagination } = require("express-handlebars-paginate");
 
 app.use(express.static(__dirname + "/html"));
