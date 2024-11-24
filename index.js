@@ -4,6 +4,7 @@ const port = 3000;
 const expresshbs = require("express-handlebars");
 const { createPagination } = require("express-handlebars-paginate");
 
+app.set("views", path.join(__dirname, "views"));
 app.use(express.static(__dirname + "/html"));
 
 app.engine(
