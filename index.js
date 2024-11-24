@@ -2,18 +2,19 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const expresshbs = require("express-handlebars");
+const path = require("path");
 const { createPagination } = require("express-handlebars-paginate");
 
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(__dirname + "/html"));
+app.use(express.static(path.join(__dirname, "html")));
 
 app.engine(
     "hbs", 
     expresshbs.engine({
         extname: "hbs",
         defaultLayout: "layout",
-        layoutsDir: __dirname + "/views/layouts",
-        partialsDir: __dirname + "/views/partials",
+        layoutsDir: path.join(__dirname, "views/layouts"),
+        partialsDir: path.join(__dirname, "views/partials"),
         runtimeOptions: {
             allowProtoPropertiesByDefault: true,
         },
