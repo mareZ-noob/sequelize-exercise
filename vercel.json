@@ -9,7 +9,7 @@
                     "models/**",
                     "config/**"
                 ],
-                "installCommand": "npm install pg pg-hstore"
+                "installCommand": "npm install"
             }
         }
     ],
